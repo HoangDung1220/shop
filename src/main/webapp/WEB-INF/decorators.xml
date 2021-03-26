@@ -22,5 +22,13 @@
 </decorator>
 
 
+<decorator page="login.jsp" name="login">
+
+<pattern>/dang-nhap</pattern>
+
+</decorator>
+
+
+
 
 </decorators>
