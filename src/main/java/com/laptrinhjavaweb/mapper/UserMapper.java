@@ -17,12 +17,15 @@ public class UserMapper implements RowMapper<UserModel>{
 			user.setPassword(rs.getString("password"));
 			user.setStatus(rs.getInt("status"));
 			user.setRoleid(rs.getLong("idrole"));
-			
+			try {
 			RoleModel roleModel = new RoleModel();
 			roleModel.setName(rs.getString("name"));
 			roleModel.setCode(rs.getString("code"));
 			
 			user.setRoleModel(roleModel);
+			} catch (Exception e) {
+				
+			}
 			
 			return user;
 		} catch (SQLException e) {

@@ -7,9 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<!-- "<c:url value='/dang-nhap'/>" -->
 <div class="container">
 	<div class="d-flex justify-content-center h-100">
+	<form action ="dang-nhap" id="formLogin" method="POST" >  	
 		<div class="card">
 			<div class="card-header">
 				<h3>Sign In</h3>
@@ -19,9 +20,16 @@
 					<span><i class="fab fa-twitter-square"></i></span>
 				</div>
 			</div>
+			 
+			 	
 			<div class="card-body">
-				<form action ="<c:url value='/dang-nhap'/>'" id="formLogin" method="POST" >
-					<div class="input-group form-group">
+			
+			
+			<div class="alert alert-${alert}">
+ 			 <strong>${message}</strong> 
+			</div>
+			
+					 <div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
@@ -36,14 +44,14 @@
 					</div>
 					<div class="row align-items-center remember">
 						<input type="checkbox">Remember Me
-					</div>
+					</div> 
 					<div class="form-group">
 						<input type="hidden" value="login" name="action" >
 						<button type="submit" class="btn float-right login_btn">Login</button>
 					</div>
-								
-				</form>
-			</div>
+					</div>			
+				
+			
 			<div class="card-footer">
 				<div class="d-flex justify-content-center links">
 					Don't have an account?<a href="#">Sign Up</a>
@@ -53,6 +61,7 @@
 				</div>
 			</div>
 		</div>
+		</form>
 	</div>
 </div>
 

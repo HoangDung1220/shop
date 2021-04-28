@@ -18,12 +18,21 @@
                     <a data-toggle="dropdown" href="#" class="dropdown-toggle">
                         Xin chào
                     </a>
-                    <li class="light-blue dropdown-modal">
-                        <a href='<c:url value='/thoat'/>'>
+                    <c:if test="${not empty USERMODEL}">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Wellcome, ${USERMODEL.fullName}</a>
+          </li>
+           <c:if test="${not empty USERMODEL}">
+         <li class="light-blue dropdown-modal">
+                        <a href="<c:url value='/thoat?action=logout'/>">
                             <i class="ace-icon fa fa-power-off"></i>
                             Thoát
                         </a>
                     </li>
+          </c:if>
+          </c:if>
+          	
+                    
                 </li>
             </ul>
         </div>

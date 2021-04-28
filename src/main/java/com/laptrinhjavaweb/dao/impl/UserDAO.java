@@ -13,7 +13,7 @@ public class UserDAO extends AbstractDAO<UserModel> implements IUserDao {
 		List<UserModel> list = new ArrayList<UserModel>();
 		String st ="select *from user inner join role on user.idrole=role.idrole  where username =? and password =? and status=?";
 		list = query(st,new UserMapper(),username,password,status);
-		return list.get(0);
+		return list.isEmpty()?null:list.get(0);
 	}
 
 }

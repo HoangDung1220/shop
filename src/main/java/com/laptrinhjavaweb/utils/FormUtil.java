@@ -12,6 +12,8 @@ public class FormUtil {
 		T object = null;
 		try {
 			object = tClass.newInstance();
+			
+
 			try {
 				BeanUtils.populate(object, request.getParameterMap());
 			} catch (InvocationTargetException e) {
